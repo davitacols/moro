@@ -17,11 +17,12 @@ export default function Navigation() {
   }, [])
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Impact', href: '#impact' },
-    { name: 'Events', href: '#events' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Impact', href: '/#impact' },
+    { name: 'Events', href: '/#events' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'Contact', href: '/#contact' },
   ]
 
   return (
@@ -30,7 +31,7 @@ export default function Navigation() {
     }`}>
       <div className="section-container">
         <div className="flex items-center justify-between h-20 lg:h-24">
-          <div className="font-display text-2xl lg:text-3xl font-black text-black flex items-center">
+          <div className="font-display text-2xl lg:text-3xl font-black text-purple flex items-center">
             <Image
               src="/logo.png"
               alt="Morolake Cares Logo"
@@ -56,7 +57,7 @@ export default function Navigation() {
               href="https://paystack.com/pay/morolakecares"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="bg-purple hover:bg-purple-dark text-white px-8 py-4 font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105"
             >
               DONATE
             </a>
@@ -103,7 +104,7 @@ export default function Navigation() {
               href="https://paystack.com/pay/morolakecares"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary inline-block"
+              className="bg-purple hover:bg-purple-dark text-white px-8 py-4 font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105 inline-block"
             >
               DONATE
             </a>

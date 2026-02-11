@@ -8,7 +8,7 @@ export default function CTA() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -17,7 +17,7 @@ export default function CTA() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h2 className="heading-xl mb-12">
+          <h2 className="heading-xl mb-12 text-gray-800">
             TOGETHER,
             <br />
             WE CAN
@@ -26,7 +26,7 @@ export default function CTA() {
             <br />
             LIVES
           </h2>
-          <p className="text-xl text-gray-600 mb-16 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-700 mb-16 max-w-4xl mx-auto leading-relaxed">
             Your support creates ripple effects of positive change that extend far beyond 
             individual lives - it transforms entire communities and builds a brighter future for Nigeria.
           </p>

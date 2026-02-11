@@ -18,12 +18,10 @@ export default function Hero() {
             <p className="eyebrow">
               BUILDING HOPE, CREATING CHANGE
             </p>
-            <h1 className="text-5xl lg:text-7xl font-display font-black leading-none">
+            <h1 className="text-4xl lg:text-6xl font-display font-black leading-none text-purple">
               EMPOWERING
               <br />
-              <span className="relative inline-block">
-                <span className="bg-black text-white px-4 py-2 transform -rotate-2 inline-block">GIRLS</span>
-              </span>
+              THE GIRL CHILD
               <br />
               TO TRANSFORM
               <br />
@@ -31,7 +29,7 @@ export default function Hero() {
             </h1>
             <p className="text-xl text-gray-600 max-w-lg leading-relaxed">
               Through education, empowerment, and community support, we're breaking barriers 
-              and creating opportunities for underprivileged girls across Nigeria.
+              and creating opportunities for underprivileged girls and women.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
               <a href="#impact" className="btn-primary">
@@ -45,15 +43,15 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8">
               <div>
-                <div className="text-3xl font-black">5,000+</div>
+                <div className="text-3xl font-black text-purple">5,000+</div>
                 <div className="text-xs uppercase tracking-wider text-gray-600">Girls Educated</div>
               </div>
               <div>
-                <div className="text-3xl font-black">200+</div>
+                <div className="text-3xl font-black text-purple">200+</div>
                 <div className="text-xs uppercase tracking-wider text-gray-600">Schools Supported</div>
               </div>
               <div>
-                <div className="text-3xl font-black">₦50M+</div>
+                <div className="text-3xl font-black text-purple">₦50M+</div>
                 <div className="text-xs uppercase tracking-wider text-gray-600">Impact Value</div>
               </div>
             </div>
