@@ -41,13 +41,13 @@ export default function CTA() {
               href="https://paystack.com/pay/morolakecares"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="bg-purple hover:bg-purple-dark text-white px-8 py-4 font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105 border-2 border-purple"
             >
               MAKE A DONATION
             </a>
             <a
               href="#contact"
-              className="btn-secondary"
+              className="border-2 border-purple text-purple hover:bg-purple hover:text-white px-8 py-4 font-bold uppercase tracking-wider transition-all duration-300"
             >
               PARTNER WITH US
             </a>

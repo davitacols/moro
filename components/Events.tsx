@@ -68,7 +68,7 @@ export default function Events() {
 
                   {/* Event Card */}
                   <div className="md:ml-20 w-full">
-                    <div className="bg-cream hover:bg-white hover:shadow-lg transition-all duration-300 p-6 rounded-xl">
+                    <div className="bg-gray-100 hover:bg-white hover:shadow-lg transition-all duration-300 p-6 rounded-xl">
                       <div className="inline-block bg-primary text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
                         {event.date}
                       </div>

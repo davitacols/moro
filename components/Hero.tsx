@@ -21,7 +21,9 @@ export default function Hero() {
             <h1 className="text-4xl lg:text-6xl font-display font-black leading-none text-purple">
               EMPOWERING
               <br />
-              THE GIRL CHILD
+              THE <span className="relative inline-block">
+                <span className="bg-purple text-white px-4 py-2 transform -rotate-2 inline-block">GIRL</span>
+              </span> CHILD
               <br />
               TO TRANSFORM
               <br />
@@ -32,10 +34,10 @@ export default function Hero() {
               and creating opportunities for underprivileged girls and women.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
-              <a href="#impact" className="btn-primary">
+              <a href="#impact" className="bg-purple hover:bg-purple-dark text-white px-8 py-4 font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105 border-2 border-purple">
                 SEE OUR IMPACT
               </a>
-              <a href="#about" className="btn-secondary">
+              <a href="#about" className="border-2 border-purple text-purple hover:bg-purple hover:text-white px-8 py-4 font-bold uppercase tracking-wider transition-all duration-300">
                 OUR STORY
               </a>
             </div>
