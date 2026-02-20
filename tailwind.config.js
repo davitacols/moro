@@ -15,8 +15,8 @@ module.exports = {
         secondary: '#FFA726',
         accent: '#FF6F00',
         purple: {
-          DEFAULT: '#9932CC',
-          dark: '#8B008B',
+          DEFAULT: '#702082',
+          dark: '#5A1A68',
         },
         cream: {
           DEFAULT: '#FFF8F0',

@@ -57,7 +57,7 @@ export default function Impact() {
           className="mb-20"
         >
           <p className="eyebrow text-gray-400 mb-8">OUR IMPACT</p>
-          <h2 className="heading-xl mb-12 text-white">
+          <h2 className="text-4xl lg:text-6xl font-display font-black leading-none tracking-tight mb-12 text-white">
             STORIES OF
             <br />
             <span className="italic">TRANSFORMATION</span>
