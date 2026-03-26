@@ -93,28 +93,41 @@ export default function Navigation() {
           </div>
 
           <button
-            className="rounded-full border border-transparent p-2 text-slate-900 transition-colors duration-300 hover:border-purple/20 hover:bg-purple/5 md:hidden"
+            className={`group flex items-center gap-2.5 rounded-full border px-2.5 py-2 text-slate-900 transition-all duration-300 md:hidden ${
+              isMobileMenuOpen
+                ? 'border-purple/15 bg-purple/10 shadow-[0_18px_40px_-26px_rgba(83,19,100,0.8)]'
+                : 'border-slate-200/80 bg-white/80 shadow-[0_14px_34px_-24px_rgba(36,19,47,0.5)] hover:border-purple/20 hover:bg-purple/5'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle mobile menu"
+            aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
             aria-expanded={isMobileMenuOpen}
           >
-            <div className="flex h-6 w-6 flex-col items-center justify-center">
+            <span className="pl-1 text-[0.65rem] font-black uppercase tracking-[0.28em] text-slate-700 transition-colors duration-300 group-hover:text-purple">
+              {isMobileMenuOpen ? 'Close' : 'Menu'}
+            </span>
+            <span
+              className={`relative flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-300 ${
+                isMobileMenuOpen
+                  ? 'border-purple/20 bg-white text-purple'
+                  : 'border-slate-200 bg-white/90 text-slate-900'
+              }`}
+            >
               <span
-                className={`block h-0.5 w-6 bg-current transition-all duration-300 ${
-                  isMobileMenuOpen ? 'translate-y-1.5 rotate-45' : ''
+                className={`absolute h-0.5 rounded-full bg-current transition-all duration-300 ${
+                  isMobileMenuOpen ? 'w-5 rotate-45' : 'w-5 -translate-y-[5px]'
                 }`}
               />
               <span
-                className={`mt-1 block h-0.5 w-6 bg-current transition-all duration-300 ${
-                  isMobileMenuOpen ? 'opacity-0' : ''
+                className={`absolute h-0.5 rounded-full bg-current transition-all duration-300 ${
+                  isMobileMenuOpen ? 'w-5 -rotate-45' : 'w-3 translate-x-1 translate-y-[5px]'
                 }`}
               />
               <span
-                className={`mt-1 block h-0.5 w-6 bg-current transition-all duration-300 ${
-                  isMobileMenuOpen ? '-translate-y-1.5 -rotate-45' : ''
+                className={`absolute h-1.5 w-1.5 rounded-full bg-[#f2bb52] transition-all duration-300 ${
+                  isMobileMenuOpen ? 'scale-0 opacity-0' : '-translate-x-[7px] translate-y-[5px] opacity-100'
                 }`}
               />
-            </div>
+            </span>
           </button>
         </div>
 
