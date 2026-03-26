@@ -89,8 +89,8 @@ function MemberCard({ member }: { member: Member }) {
   const hasImage = Boolean(member.image)
 
   return (
-    <article className="card-surface bg-white/[0.92]">
-      <div className="image-frame relative min-h-[260px] bg-gradient-to-br from-[#f7ecfb] via-white to-[#f4efe8]">
+    <article className="card-surface h-full bg-white/[0.92]">
+      <div className="image-frame relative min-h-[220px] bg-gradient-to-br from-[#f7ecfb] via-white to-[#f4efe8] sm:min-h-[260px]">
         {hasImage ? (
           <Image
             src={member.image as string}
@@ -107,9 +107,13 @@ function MemberCard({ member }: { member: Member }) {
       </div>
       <div className="mt-5">
         <p className="soft-label">{member.role}</p>
-        <h3 className="mt-2 text-2xl font-display font-bold text-slate-950">{member.name}</h3>
+        <h3 className="mt-2 text-xl font-display font-bold text-slate-950 sm:text-2xl">
+          {member.name}
+        </h3>
         {member.bio ? (
-          <p className="mt-4 text-base leading-relaxed text-slate-600">{member.bio}</p>
+          <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+            {member.bio}
+          </p>
         ) : null}
         {member.ctaLabel && member.ctaHref ? (
           <a href={member.ctaHref} className="btn-secondary mt-5">
@@ -131,7 +135,7 @@ function MemberGroup({
   columns: string
 }) {
   return (
-    <section className="mt-14">
+    <section className="mt-12 sm:mt-14">
       <div className="mb-6">
         <p className="eyebrow">{title}</p>
       </div>
@@ -163,7 +167,7 @@ export default function Team() {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
+          className="mb-10 flex flex-col gap-5 lg:mb-12 lg:flex-row lg:items-end lg:justify-between"
         >
           <div className="max-w-3xl space-y-5">
             <p className="eyebrow">Our Team</p>
@@ -171,7 +175,7 @@ export default function Team() {
               The original team roster, restored with its photos and writeups.
             </h2>
           </div>
-          <p className="max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             A brief overview of what to expect in terms of experiences from the team, based on the
             original site content.
           </p>

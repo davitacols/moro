@@ -39,7 +39,7 @@ export default function Mission() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
+          className="mb-12 flex flex-col gap-5 lg:mb-14 lg:flex-row lg:items-end lg:justify-between"
         >
           <div className="max-w-3xl space-y-5">
             <p className="eyebrow">About Morolake Cares</p>
@@ -47,20 +47,20 @@ export default function Mission() {
               The mission is grounded in what girls and families actually face.
             </h2>
           </div>
-          <p className="max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             Morolake Cares Initiatives aims to educate the girl-child, support school dropouts and
             underprivileged girls, and widen opportunity through practical community care.
           </p>
         </motion.div>
 
-        <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-[0.92fr_1.08fr]">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="section-shell p-5 lg:p-6"
+            className="section-shell p-4 sm:p-5 lg:p-6"
           >
-            <div className="image-frame relative min-h-[360px]">
+            <div className="image-frame relative min-h-[280px] sm:min-h-[360px]">
               <Image
                 src="/legacy/bg/26.png"
                 alt="Community gathering captured on the restored Morolake Cares website"
@@ -69,9 +69,9 @@ export default function Mission() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/[0.15] to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white lg:p-7">
+              <div className="absolute bottom-0 left-0 right-0 p-5 text-white sm:p-6 lg:p-7">
                 <p className="soft-label text-white/75">Why the work matters</p>
-                <p className="mt-3 max-w-md text-2xl font-display font-bold">
+                <p className="mt-3 max-w-md text-xl font-display font-bold sm:text-2xl">
                   Educated girls create a positive ripple effect in their health, families,
                   communities, and society.
                 </p>
@@ -80,7 +80,7 @@ export default function Mission() {
 
             <div className="mt-5 card-surface bg-white/[0.92]">
               <p className="soft-label">How the organization frames the challenge</p>
-              <div className="mt-4 space-y-4 text-lg leading-relaxed text-slate-700">
+              <div className="mt-4 space-y-4 text-base leading-relaxed text-slate-700 sm:text-lg">
                 <p>
                   Morolake Cares identifies early pregnancy, gender inequality, low family income,
                   poverty, and the death of one or both parents as some of the factors that drive
@@ -99,7 +99,7 @@ export default function Mission() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="grid gap-6 md:grid-cols-2"
+            className="grid gap-5 sm:gap-6 md:grid-cols-2"
           >
             {focusAreas.map((area, index) => (
               <motion.div
@@ -110,10 +110,10 @@ export default function Mission() {
                 className="card-surface bg-white/[0.88]"
               >
                 <p className="soft-label">Focus area</p>
-                <h3 className="mt-3 text-2xl font-display font-bold text-slate-950">
+                <h3 className="mt-3 text-xl font-display font-bold text-slate-950 sm:text-2xl">
                   {area.title}
                 </h3>
-                <p className="mt-4 text-lg leading-relaxed text-slate-600">
+                <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
                   {area.description}
                 </p>
               </motion.div>

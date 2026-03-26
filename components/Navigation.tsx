@@ -35,28 +35,28 @@ export default function Navigation() {
   }, [pathname])
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+    <nav className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
       <div
-        className={`mx-auto max-w-7xl rounded-full border px-4 transition-all duration-300 sm:px-6 ${
+        className={`mx-auto max-w-7xl rounded-full border px-3 transition-all duration-300 sm:px-6 ${
           isScrolled || isMobileMenuOpen
             ? 'border-white/75 bg-white/90 shadow-[0_22px_70px_-38px_rgba(36,19,47,0.78)] backdrop-blur-xl'
             : 'border-white/50 bg-white/[0.65] backdrop-blur-lg'
         }`}
       >
-        <div className="flex h-20 items-center justify-between gap-4">
+        <div className="flex h-[4.5rem] items-center justify-between gap-3 sm:h-20 sm:gap-4">
           <Link href="/" className="flex min-w-0 items-center gap-3">
             <Image
               src="/logo.png"
               alt="Morolake Cares Logo"
-              width={48}
-              height={48}
-              className="h-12 w-12 rounded-full border border-white/70 bg-white/80 p-1 shadow-md"
+              width={44}
+              height={44}
+              className="h-10 w-10 rounded-full border border-white/70 bg-white/80 p-1 shadow-md sm:h-12 sm:w-12"
             />
             <div className="min-w-0">
-              <div className="truncate font-display text-xl font-black uppercase tracking-[0.2em] text-slate-900 lg:text-2xl">
+              <div className="truncate font-display text-base font-black uppercase tracking-[0.14em] text-slate-900 sm:text-xl sm:tracking-[0.2em] lg:text-2xl">
                 Morolake Cares
               </div>
-              <div className="hidden text-sm tracking-[0.18em] text-slate-500 md:block">
+              <div className="hidden text-sm tracking-[0.18em] text-slate-500 lg:block">
                 Every life matters
               </div>
             </div>

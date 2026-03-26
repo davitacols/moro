@@ -28,11 +28,11 @@ export default function Footer() {
   return (
     <footer className="pb-10">
       <div className="section-container">
-        <div className="section-shell overflow-hidden bg-[#17101f] p-8 text-white lg:p-10">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.75fr_0.75fr]">
+        <div className="section-shell overflow-hidden bg-[#17101f] p-6 text-white sm:p-8 lg:p-10">
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.75fr_0.75fr] lg:gap-10">
             <div className="max-w-xl">
               <h3 className="font-display text-3xl font-bold">Morolake Cares Initiatives</h3>
-              <p className="mt-5 text-lg leading-relaxed text-white/[0.72]">
+              <p className="mt-5 text-base leading-relaxed text-white/[0.72] sm:text-lg">
                 Morolake Cares Initiatives aims to educate the girl-child, support school dropouts,
                 and improve the lives of underprivileged girls and families through practical care.
               </p>
@@ -78,7 +78,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 border-t border-white/10 pt-8 md:grid-cols-4">
+          <div className="mt-8 grid gap-6 border-t border-white/10 pt-8 md:grid-cols-4 sm:mt-10">
             <div className="min-w-0">
               <h5 className="font-semibold">Address</h5>
               <p className="mt-2 text-sm leading-relaxed text-white/70">

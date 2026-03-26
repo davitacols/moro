@@ -48,9 +48,9 @@ export default function ContactPage() {
   }
 
   return (
-    <section className="section-padding pt-32 lg:pt-36">
+    <section className="section-padding pt-28 lg:pt-36">
       <div className="section-container">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ export default function ContactPage() {
               <h1 className="heading-lg text-slate-950">
                 Reach Morolake Cares Initiatives directly.
               </h1>
-              <p className="max-w-2xl text-xl leading-relaxed text-slate-600">
+              <p className="max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl">
                 For partnerships, volunteering, donations, or general enquiries, use any of the
                 contact options below. The team is based in Ibadan and reachable during weekdays.
               </p>
@@ -114,9 +114,9 @@ export default function ContactPage() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="section-shell overflow-hidden p-5"
+            className="section-shell overflow-hidden p-4 sm:p-5"
           >
-            <div className="image-frame relative min-h-[360px] lg:min-h-[520px]">
+            <div className="image-frame relative min-h-[280px] sm:min-h-[360px] lg:min-h-[520px]">
               <Image
                 src="/legacy/bg/26.png"
                 alt="Morolake Cares community gathering"
@@ -125,9 +125,9 @@ export default function ContactPage() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-slate-950/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white lg:p-8">
+              <div className="absolute bottom-0 left-0 right-0 p-5 text-white sm:p-6 lg:p-8">
                 <p className="soft-label text-white/70">Stay connected</p>
-                <p className="mt-3 max-w-lg text-2xl font-display font-bold">
+                <p className="mt-3 max-w-lg text-xl font-display font-bold sm:text-2xl">
                   Partnerships and community support are a big part of how the work keeps growing.
                 </p>
               </div>
@@ -164,13 +164,13 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="section-shell mt-10 p-6 sm:p-8 lg:mt-12 lg:p-10"
+          className="section-shell mt-10 p-5 sm:p-8 lg:mt-12 lg:p-10"
         >
           <div className="grid gap-8 lg:grid-cols-[0.36fr_0.64fr] lg:items-start">
             <div className="space-y-4">
               <p className="eyebrow">Leave A Message</p>
               <h2 className="heading-md text-slate-950">Send a message to the team.</h2>
-              <p className="text-lg leading-relaxed text-slate-600">
+              <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
                 Your email address will not be published. Required fields are marked.
               </p>
               <p className="text-sm leading-relaxed text-slate-500">

@@ -95,7 +95,7 @@ export default function Gallery() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
+          className="mb-12 flex flex-col gap-5 lg:mb-14 lg:flex-row lg:items-end lg:justify-between"
         >
           <div className="max-w-3xl space-y-5">
             <p className="eyebrow">The Gallery</p>
@@ -103,7 +103,7 @@ export default function Gallery() {
               The original gallery pictures, plus the full event-photo archive.
             </h2>
           </div>
-          <p className="max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             This page now preserves the original gallery trio from the initial site and adds the
             old event-photo titles so the archive feels complete again.
           </p>
@@ -118,7 +118,7 @@ export default function Gallery() {
               transition={{ duration: 0.55, delay: index * 0.08 }}
               className="group relative overflow-hidden rounded-[1.8rem] border border-white/60 shadow-[0_24px_70px_-38px_rgba(35,16,45,0.52)]"
             >
-              <div className="relative min-h-[420px]">
+              <div className="relative min-h-[320px] sm:min-h-[420px]">
                 <Image
                   src={item.src}
                   alt={item.alt}
@@ -127,11 +127,13 @@ export default function Gallery() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/15 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-6">
                   <p className="soft-label text-white/65">Original gallery</p>
-                  <h3 className="mt-3 text-3xl font-display font-bold">{item.title}</h3>
+                  <h3 className="mt-3 text-2xl font-display font-bold sm:text-3xl">
+                    {item.title}
+                  </h3>
                   {item.subtitle ? (
-                    <p className="mt-2 text-base uppercase tracking-[0.22em] text-white/80">
+                    <p className="mt-2 text-sm uppercase tracking-[0.22em] text-white/80 sm:text-base">
                       {item.subtitle}
                     </p>
                   ) : null}
@@ -145,16 +147,16 @@ export default function Gallery() {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-16"
+          className="mt-14 sm:mt-16"
         >
-          <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div className="mb-7 flex flex-col gap-4 lg:mb-8 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="eyebrow">Event Archive</p>
               <h3 className="mt-4 heading-md text-slate-950">
                 Event photos and titles restored from the initial website.
               </h3>
             </div>
-            <p className="max-w-2xl text-lg leading-relaxed text-slate-600">
+            <p className="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
               These cards bring the original event coverage into one place so the gallery doubles as
               a usable archive.
             </p>
@@ -169,7 +171,7 @@ export default function Gallery() {
                 transition={{ duration: 0.55, delay: 0.25 + index * 0.05 }}
                 className="card-surface bg-white/[0.92]"
               >
-                <div className="image-frame relative min-h-[240px]">
+                <div className="image-frame relative min-h-[220px] sm:min-h-[240px]">
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -180,7 +182,7 @@ export default function Gallery() {
                 </div>
                 <div className="mt-5">
                   <p className="soft-label">{event.date}</p>
-                  <h4 className="mt-3 text-2xl font-display font-bold text-slate-950">
+                  <h4 className="mt-3 text-xl font-display font-bold text-slate-950 sm:text-2xl">
                     {event.title}
                   </h4>
                 </div>

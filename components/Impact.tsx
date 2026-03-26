@@ -67,16 +67,16 @@ export default function Impact() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="section-shell overflow-hidden bg-[#1e1429] p-8 text-white lg:p-12"
+          className="section-shell overflow-hidden bg-[#1e1429] p-6 text-white sm:p-8 lg:p-12"
         >
-          <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="mb-8 flex flex-col gap-5 lg:mb-10 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
               <p className="eyebrow bg-white/10 text-white/80">Featured stories</p>
-              <h2 className="mt-6 text-4xl font-display font-black leading-none tracking-tight text-white lg:text-6xl">
+              <h2 className="mt-5 text-3xl font-display font-black leading-none tracking-tight text-white sm:text-4xl lg:mt-6 lg:text-6xl">
                 Real initiatives, visible outcomes, and a stronger sense of what the work looks like.
               </h2>
             </div>
-            <p className="max-w-2xl text-lg leading-relaxed text-white/[0.72]">
+            <p className="max-w-2xl text-base leading-relaxed text-white/[0.72] sm:text-lg">
               These stories come directly from the restored live site and show the mix of education
               support, dignity care, family empowerment, and infrastructure help that defines the
               organization.
@@ -92,7 +92,7 @@ export default function Impact() {
                 transition={{ duration: 0.6, delay: index * 0.08 }}
                 className="overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/[0.06]"
               >
-                <div className="relative min-h-[240px]">
+                <div className="relative min-h-[220px] sm:min-h-[240px]">
                   <Image
                     src={story.image}
                     alt={story.title}
@@ -107,14 +107,16 @@ export default function Impact() {
                     </div>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-5 sm:p-6">
                   <div className="text-sm font-bold uppercase tracking-[0.24em] text-white/[0.54]">
                     {story.date}
                   </div>
-                  <h3 className="mt-3 text-2xl font-display font-bold text-white">
+                  <h3 className="mt-3 text-xl font-display font-bold text-white sm:text-2xl">
                     {story.title}
                   </h3>
-                  <p className="mt-4 leading-relaxed text-white/[0.72]">{story.description}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-white/[0.72] sm:text-base">
+                    {story.description}
+                  </p>
                 </div>
               </motion.article>
             ))}

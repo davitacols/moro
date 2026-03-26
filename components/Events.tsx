@@ -54,7 +54,7 @@ export default function Events() {
             <h2 className="mt-5 heading-lg text-slate-950">
               A clearer picture of how the work shows up in the community.
             </h2>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:mt-6 sm:text-lg">
               The restored site highlights a pattern: identify a real pressure point, respond with
               practical help, and stay visibly connected to the people affected.
             </p>
@@ -63,7 +63,7 @@ export default function Events() {
             </a>
           </div>
 
-          <div className="grid gap-5">
+          <div className="grid gap-4 sm:gap-5">
             {events.map((event, index) => (
               <motion.article
                 key={event.title}
@@ -72,8 +72,8 @@ export default function Events() {
                 transition={{ duration: 0.6, delay: index * 0.08 }}
                 className="card-surface bg-white/[0.88]"
               >
-                <div className="grid gap-6 md:grid-cols-[0.42fr_0.58fr] md:items-center">
-                  <div className="image-frame relative min-h-[230px]">
+                <div className="grid gap-5 md:grid-cols-[0.42fr_0.58fr] md:items-center md:gap-6">
+                  <div className="image-frame relative min-h-[210px] sm:min-h-[230px]">
                     <Image
                       src={event.image}
                       alt={event.title}
@@ -82,14 +82,14 @@ export default function Events() {
                       className="object-cover"
                     />
                   </div>
-                  <div>
-                    <div className="inline-flex rounded-full border border-purple/10 bg-purple/5 px-3 py-1 text-sm font-bold uppercase tracking-[0.24em] text-purple">
+                  <div className="min-w-0">
+                    <div className="inline-flex rounded-full border border-purple/10 bg-purple/5 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-purple sm:text-sm sm:tracking-[0.24em]">
                       {event.date}
                     </div>
-                    <h3 className="mt-4 text-2xl font-display font-bold text-slate-950">
+                    <h3 className="mt-4 text-xl font-display font-bold text-slate-950 sm:text-2xl">
                       {event.title}
                     </h3>
-                    <p className="mt-4 text-lg leading-relaxed text-slate-600">
+                    <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
                       {event.description}
                     </p>
                   </div>
