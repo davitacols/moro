@@ -4,12 +4,48 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --page-bg: #f8f2ea;
+    --surface: rgba(255, 255, 255, 0.84);
+    --ink: #241833;
+    --muted: #6f6478;
+    --line: rgba(86, 54, 104, 0.14);
+    --brand: #702082;
+    --brand-dark: #531364;
+    --accent: #f2bb52;
+  }
+
   html {
     scroll-behavior: smooth;
+    background: var(--page-bg);
   }
-  
+
   body {
     font-family: 'League Spartan', sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 12% 10%, rgba(242, 187, 82, 0.18), transparent 24%),
+      radial-gradient(circle at 84% 18%, rgba(112, 32, 130, 0.1), transparent 28%),
+      linear-gradient(180deg, #fffaf6 0%, #fff 30%, #f6eee7 100%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.22;
+    background-image:
+      linear-gradient(rgba(112, 32, 130, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(112, 32, 130, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent 82%);
+  }
+
+  ::selection {
+    background: rgba(112, 32, 130, 0.18);
+    color: var(--ink);
   }
 }
 
@@ -17,44 +53,97 @@
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+
   .section-padding {
-    @apply py-20 lg:py-32;
+    @apply py-20 lg:py-28;
   }
-  
+
   .btn-primary {
-    @apply bg-black hover:bg-gray-800 text-white px-8 py-4 font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold uppercase tracking-[0.24em] text-white transition-all duration-300;
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+    box-shadow: 0 18px 42px -22px rgba(83, 19, 100, 0.9);
   }
-  
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 46px -24px rgba(83, 19, 100, 0.95);
+  }
+
   .btn-secondary {
-    @apply border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 font-bold uppercase tracking-wider transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border px-6 py-3.5 text-sm font-bold uppercase tracking-[0.24em] transition-all duration-300;
+    border-color: rgba(112, 32, 130, 0.22);
+    color: var(--brand);
+    background: rgba(255, 255, 255, 0.74);
   }
-  
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    border-color: rgba(112, 32, 130, 0.44);
+    background: rgba(112, 32, 130, 0.08);
+  }
+
   .btn-white {
-    @apply bg-white text-black hover:bg-gray-100 px-8 py-4 font-bold uppercase tracking-wider transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold uppercase tracking-[0.24em] text-slate-900 transition-all duration-300;
+    box-shadow: 0 18px 36px -20px rgba(255, 255, 255, 0.85);
   }
-  
+
+  .btn-white:hover {
+    transform: translateY(-2px);
+    background: #f9f3ff;
+  }
+
   .heading-xl {
-    @apply text-5xl lg:text-8xl font-display font-black leading-none tracking-tight;
+    @apply text-5xl md:text-6xl lg:text-7xl xl:text-[5.35rem] font-display font-black leading-[0.95] tracking-tight;
   }
-  
+
   .heading-lg {
     @apply text-4xl lg:text-6xl font-display font-bold leading-tight tracking-tight;
   }
-  
+
   .heading-md {
     @apply text-3xl lg:text-4xl font-display font-bold leading-tight;
   }
-  
+
   .eyebrow {
-    @apply text-xs font-black uppercase tracking-widest text-gray-600;
+    @apply inline-flex items-center rounded-full px-3 py-1.5 text-[0.7rem] font-black uppercase tracking-[0.3em];
+    color: var(--brand);
+    background: rgba(112, 32, 130, 0.08);
   }
-  
-  .getty-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent;
+
+  .section-shell {
+    @apply rounded-[2rem] border shadow-[0_24px_80px_-32px_rgba(35,16,45,0.35)] backdrop-blur-sm;
+    border-color: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.78);
   }
-  
-  .getty-text-shadow {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+
+  .card-surface {
+    @apply rounded-[1.6rem] border p-6 lg:p-7;
+    border-color: var(--line);
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 0 18px 54px -36px rgba(35, 16, 45, 0.42);
+  }
+
+  .panel-dark {
+    @apply rounded-[1.75rem] border p-6 lg:p-7 text-white;
+    border-color: rgba(255, 255, 255, 0.14);
+    background: linear-gradient(135deg, #24132f 0%, #4a1f5d 100%);
+    box-shadow: 0 24px 80px -44px rgba(26, 11, 34, 0.95);
+  }
+
+  .soft-label {
+    @apply text-xs font-bold uppercase tracking-[0.26em];
+    color: var(--muted);
+  }
+
+  .image-frame {
+    @apply overflow-hidden rounded-[2rem] border;
+    border-color: rgba(255, 255, 255, 0.62);
+    box-shadow: 0 24px 80px -40px rgba(35, 16, 45, 0.55);
+  }
+
+  .decor-ring {
+    position: absolute;
+    border-radius: 9999px;
+    border: 1px solid rgba(112, 32, 130, 0.12);
   }
 }

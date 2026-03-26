@@ -9,74 +9,86 @@ export default function Founder() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="founder" className="section-padding bg-gradient-to-br from-purple/5 to-white">
+    <section id="founder" className="section-padding pt-8">
       <div className="section-container">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="mb-14 text-center"
         >
-          <p className="eyebrow mb-8 text-purple">MEET THE FOUNDER</p>
-          <h2 className="heading-lg text-purple mb-6">
-            THE VISION
-            <br />
-            <span className="italic">BEHIND THE MISSION</span>
+          <p className="eyebrow">Meet the founder</p>
+          <h2 className="mt-6 heading-lg text-slate-950">
+            Oladiwura Morolake Laniyan
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative h-[500px] lg:h-[600px]"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="section-shell p-5"
           >
-            <Image
-              src="/Monisola 1b.jpeg"
-              alt="Founder of Morolake Cares Initiatives"
-              fill
-              className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-            />
+            <div className="image-frame relative min-h-[460px]">
+              <Image
+                src="/legacy/bg/morolake.jpeg"
+                alt="Oladiwura Morolake Laniyan"
+                fill
+                sizes="(max-width: 1024px) 100vw, 35vw"
+                className="object-cover"
+              />
+            </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="space-y-6"
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="grid gap-6"
           >
-            <h3 className="text-4xl font-bold text-purple mb-4">
-              Founder Name
-            </h3>
-            <p className="text-lg font-bold uppercase tracking-wider text-gray-600 mb-6">
-              Founder & Executive Director
-            </p>
-            
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
-              <p>
-                [Founder's story and background - Replace with actual founder information]
+            <div className="card-surface bg-white/[0.92]">
+              <p className="soft-label">Founder and vision</p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-700">
+                Oladiwura Morolake Laniyan is an innovative woman with broad knowledge and
+                experience across several areas, including multidisciplinary cancer pathway and
+                mental health teams within the NHS in the United Kingdom.
               </p>
-              <p>
-                With a deep passion for education and women's empowerment, our founder established 
-                Morolake Cares Initiatives to create lasting change in the lives of underprivileged 
-                girls across Nigeria.
-              </p>
-              <p>
-                Through dedication, compassion, and unwavering commitment, the organization has grown 
-                to impact thousands of lives, providing education, healthcare support, and community 
-                development programs that transform entire communities.
-              </p>
-              <p>
-                "Every girl deserves the opportunity to reach her full potential. When we invest in 
-                girls' education, we invest in the future of our nation."
+              <p className="mt-4 text-lg leading-relaxed text-slate-700">
+                Born in Ibadan, she completed her primary and secondary education in Nigeria,
+                earned a BSc in Social Policy and Sociology at London Metropolitan University, and
+                later completed an MSc in Human Resources Management at the University of Wales,
+                Cardiff.
               </p>
             </div>
 
-            <div className="pt-6 border-t border-gray-200">
-              <p className="text-sm text-gray-600 italic">
-                [Add founder's qualifications, awards, and achievements here]
+            <div className="card-surface bg-white/[0.92]">
+              <p className="soft-label">What shaped the initiative</p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-700">
+                As someone who attended a girls secondary school in western Nigeria, she came to
+                understand the challenges, lifestyle pressures, and vulnerabilities that can shape
+                a girl's future. That experience deeply influenced her passion for educating the
+                girl-child.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-700">
+                Her involvement in cancer care pathways and charity fundraising, including Race for
+                Life, Walk the Walk, Macmillan Coffee Morning, and Save the Children fundraising
+                events, also reinforced a long-standing commitment to practical compassion,
+                community care, and education as a route out of present and future poverty.
+              </p>
+            </div>
+
+            <div className="panel-dark">
+              <p className="soft-label text-white/70">Belief at the center of the work</p>
+              <p className="mt-4 text-xl leading-relaxed text-white/[0.84]">
+                Educating a girl-child eventually produces educated mothers, who will in turn
+                educate their children.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-white/[0.78]">
+                For her, educating a girl-child also means building the mind, character,
+                capabilities, income, and welfare that help protect against current and future
+                poverty.
               </p>
             </div>
           </motion.div>
