@@ -172,20 +172,23 @@ export default function Team() {
           <div className="max-w-3xl space-y-5">
             <p className="eyebrow">Our Team</p>
             <h2 className="heading-lg text-slate-950">
-              The original team roster, restored with its photos and writeups.
+              Meet the team behind MorolakeCares.
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            A brief overview of what to expect in terms of experiences from the team, based on the
-            original site content.
+            Experienced trustees, advisors, and supporters helping drive the mission forward.
           </p>
         </motion.div>
 
-        <MemberGroup
-          title="Founder"
-          members={[founderCard]}
-          columns="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
-        />
+        <section className="mt-12 max-w-xl sm:mt-14">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.55 }}
+          >
+            <MemberCard member={founderCard} />
+          </motion.div>
+        </section>
 
         <MemberGroup
           title="Trustee"

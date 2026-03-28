@@ -53,8 +53,8 @@ export default function Navigation() {
               className="h-10 w-10 rounded-full border border-white/70 bg-white/80 p-1 shadow-md sm:h-12 sm:w-12"
             />
             <div className="min-w-0">
-              <div className="truncate font-display text-base font-black uppercase tracking-[0.14em] text-slate-900 sm:text-xl sm:tracking-[0.2em] lg:text-2xl">
-                Morolake Cares
+              <div className="truncate font-display text-base font-black tracking-[0.08em] text-purple sm:text-xl sm:tracking-[0.12em] lg:text-2xl">
+                MorolakeCares
               </div>
               <div className="hidden text-sm tracking-[0.18em] text-slate-500 lg:block">
                 Every life matters

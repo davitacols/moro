@@ -39,17 +39,12 @@ export default function Mission() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-12 flex flex-col gap-5 lg:mb-14 lg:flex-row lg:items-end lg:justify-between"
+          className="mb-12 max-w-3xl space-y-5 lg:mb-14"
         >
-          <div className="max-w-3xl space-y-5">
-            <p className="eyebrow">About Morolake Cares</p>
-            <h2 className="heading-lg text-slate-950">
-              The mission is grounded in what girls and families actually face.
-            </h2>
-          </div>
-          <p className="max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            Morolake Cares Initiatives aims to educate the girl-child, support school dropouts and
-            underprivileged girls, and widen opportunity through practical community care.
+          <p className="eyebrow">Our Mission.</p>
+          <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+            MorolakeCares Initiatives exists to educate, support, and empower the girl child while
+            strengthening the women, families, and communities around her through practical care.
           </p>
         </motion.div>
 

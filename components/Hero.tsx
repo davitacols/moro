@@ -24,19 +24,24 @@ export default function Hero() {
             className="space-y-7 sm:space-y-8"
           >
             <div className="flex flex-wrap items-center gap-3">
-              <span className="eyebrow">Ibadan, Nigeria</span>
               <span className="rounded-full border border-purple/10 bg-white/70 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-slate-600">
                 Building hope, creating change
               </span>
             </div>
 
-            <h1 className="heading-xl max-w-3xl text-slate-950">
-              Supporting the girl-child with dignity, opportunity, and care that feels real.
+            <h1 className="heading-xl max-w-3xl text-purple">
+              EMPOWERING
+              <br />
+              THE GIRL CHILD
+              <br />
+              TO TRANSFORM
+              <br />
+              COMMUNITIES
             </h1>
 
             <p className="max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl lg:text-2xl">
-              Morolake Cares Initiatives works to educate girls, support underprivileged families,
-              and respond to the community pressures that push children out of school.
+              MorolakeCares Initiatives equips girls with education, dignity, and practical
+              support so they can shape stronger families and communities.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">

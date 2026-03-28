@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
+import StatsStrip from '@/components/StatsStrip'
 import Mission from '@/components/Mission'
 import Impact from '@/components/Impact'
 import Events from '@/components/Events'
@@ -11,6 +12,7 @@ export default function Home() {
     <main>
       <Navigation />
       <Hero />
+      <StatsStrip />
       <Mission />
       <Impact />
       <Events />
