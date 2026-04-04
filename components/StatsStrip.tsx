@@ -10,7 +10,7 @@ const stats = [
     label: 'Schools Supported',
   },
   {
-    value: '₦50M+',
+    value: '50M+',
     label: 'Impact Value',
   },
 ]

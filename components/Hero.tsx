@@ -30,18 +30,21 @@ export default function Hero() {
             </div>
 
             <h1 className="heading-xl max-w-3xl text-purple">
-              EMPOWERING
-              <br />
-              THE GIRL CHILD
-              <br />
-              TO TRANSFORM
-              <br />
-              COMMUNITIES
+              <span className="block">EMPOWERING</span>
+              <span className="block">
+                THE{' '}
+                <span className="inline-block -rotate-[4deg] rounded-none bg-purple px-[0.22em] py-[0.06em] text-white shadow-[0_20px_40px_-24px_rgba(83,19,100,0.95)]">
+                  GIRL
+                </span>{' '}
+                CHILD
+              </span>
+              <span className="block">TO TRANSFORM</span>
+              <span className="block">COMMUNITIES</span>
             </h1>
 
             <p className="max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl lg:text-2xl">
-              MorolakeCares Initiatives equips girls with education, dignity, and practical
-              support so they can shape stronger families and communities.
+              Through education, empowerment, and community support, we're breaking barriers
+              and creating opportunities for underprivileged girls and Women.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -74,7 +77,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative hidden lg:block"
           >
             <div className="section-shell overflow-hidden p-3 sm:p-4 lg:p-5">
               <div className="grid gap-4 sm:gap-5 lg:grid-cols-[1.15fr_0.85fr]">

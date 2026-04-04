@@ -90,15 +90,17 @@ function MemberCard({ member }: { member: Member }) {
 
   return (
     <article className="card-surface h-full bg-white/[0.92]">
-      <div className="image-frame relative min-h-[220px] bg-gradient-to-br from-[#f7ecfb] via-white to-[#f4efe8] sm:min-h-[260px]">
+      <div className="image-frame relative h-[280px] bg-gradient-to-br from-[#f7ecfb] via-white to-[#f4efe8] sm:h-[320px]">
         {hasImage ? (
-          <Image
-            src={member.image as string}
-            alt={member.name}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
-            className="object-cover"
-          />
+          <div className="absolute inset-3 sm:inset-4">
+            <Image
+              src={member.image as string}
+              alt={member.name}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+              className="object-contain object-center"
+            />
+          </div>
         ) : (
           <div className="flex h-full items-center justify-center text-5xl font-display font-bold text-purple">
             {member.initials}
