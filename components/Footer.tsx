@@ -1,3 +1,6 @@
+import SocialIcon from '@/components/SocialIcon'
+import { socialLinks } from '@/components/socialLinks'
+
 const quickLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
@@ -111,31 +114,21 @@ export default function Footer() {
             </div>
             <div className="min-w-0">
               <h5 className="font-semibold">Follow</h5>
-              <div className="mt-2 flex flex-wrap gap-4 text-sm">
-                <a
-                  href="https://www.facebook.com/Morolake-Cares-Inititiatives-100262959291475/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/70 transition-colors duration-300 hover:text-white"
-                >
-                  Facebook
-                </a>
-                <a
-                  href="https://www.instagram.com/morolakecares/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/70 transition-colors duration-300 hover:text-white"
-                >
-                  Instagram
-                </a>
-                <a
-                  href="https://twitter.com/morolake_cares?t=71SYN6PL-B_WEO8cNG1U7g&s=09"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/70 transition-colors duration-300 hover:text-white"
-                >
-                  Twitter
-                </a>
+              <div className="mt-3 flex flex-wrap gap-3">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.name}
+                    title={link.name}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] text-white/80 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/24 hover:bg-white/[0.12] hover:text-white"
+                  >
+                    <SocialIcon name={link.name} className="h-[1.125rem] w-[1.125rem] text-[#f2bb52]" />
+                    <span className="sr-only">{link.name}</span>
+                  </a>
+                ))}
               </div>
             </div>
           </div>

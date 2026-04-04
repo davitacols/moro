@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { socialLinks } from '@/components/socialLinks'
+import SocialIcon from '@/components/SocialIcon'
 
 const supportThemes = [
   'Education access for girls at risk of dropping out',
@@ -59,6 +61,23 @@ export default function Hero() {
               <a href="#about" className="btn-secondary">
                 Learn our story
               </a>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.name}
+                  title={link.name}
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-purple/15 bg-white/[0.78] text-purple transition-all duration-300 hover:-translate-y-0.5 hover:border-purple/30 hover:bg-purple/5"
+                >
+                  <SocialIcon name={link.name} className="h-5 w-5" />
+                  <span className="sr-only">{link.name}</span>
+                </a>
+              ))}
             </div>
 
             <div className="grid gap-4 pt-2 sm:grid-cols-2 xl:grid-cols-3">
