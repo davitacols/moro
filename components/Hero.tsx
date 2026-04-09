@@ -46,7 +46,7 @@ export default function Hero() {
 
             <p className="max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl lg:text-2xl">
               Through education, empowerment, and community support, we're breaking barriers
-              and creating opportunities for underprivileged girls and Women.
+              and creating opportunities for underprivileged girls and women.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
