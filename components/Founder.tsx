@@ -51,9 +51,10 @@ export default function Founder() {
             <div className="card-surface bg-white/[0.92]">
               <p className="soft-label">Founder and vision</p>
               <p className="mt-4 text-base leading-relaxed text-slate-700 sm:text-lg">
-                Oladiwura Morolake Laniyan is an innovative woman with broad knowledge and
-                experience across several areas, including multidisciplinary cancer pathway and
-                mental health teams within the NHS in the United Kingdom.
+                Oladiwura Morolake Laniyan is an innovative woman with broad experience across
+                several areas, including multidisciplinary pathways, Lead cross-functional and
+                operational management teams, Skilled in Projects, Procurements and People&apos;s
+                management within the NHS in the United Kingdom.
               </p>
               <p className="mt-4 text-base leading-relaxed text-slate-700 sm:text-lg">
                 Born in Ibadan, she completed her primary and secondary education in Nigeria,
